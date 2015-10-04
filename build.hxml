@@ -1,0 +1,36 @@
+-cmd haxelib newrepo
+-cmd haxelib install pixijs || true
+-cmd haxelib install minject || true
+-cmd haxelib install compiletime || true
+-cmd haxelib install bindx2 || true
+-cmd haxelib install msignal || true
+-cmd haxelib install actuate || true
+-cmd haxelib install howlerjs || true
+
+--next
+
+-cp utils
+-x Assets
+--next
+
+--next
+-cmd rm Assets.n
+
+-cp src
+-cp utils
+-main pixi3demo.Pixi3Demo
+-lib pixijs
+-lib minject
+-lib compiletime
+-lib bindx2
+-lib msignal
+-lib actuate
+-lib howlerjs
+-dce full
+--no-traces
+
+--each
+
+-js js/pixi3-demo.dev.js
+-debug
+-D source-map-content
