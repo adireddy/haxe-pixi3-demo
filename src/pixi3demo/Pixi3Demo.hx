@@ -54,7 +54,7 @@ class Pixi3Demo extends Application {
 		roundPixels = true;
 		onUpdate = _onUpdate;
 		onResize = _onResize;
-		fps = 12;
+		fps = 30;
 	}
 
 	inline function _setupApplication() {

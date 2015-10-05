@@ -28,12 +28,12 @@ class Menu extends Container {
 	}
 
 	public function addItem(label:String, ?data:Dynamic):TextButton {
-		var menuItem:TextButton = new TextButton([_loader.getTexture(AssetsList.COMMON_BUTTON)]);
+		var menuItem:TextButton = new TextButton([_loader.getTexture(AssetsList.COMMON_BUTTON)], [{font: "bold 14px Verdana", fill: "#F7FE2E"}]);
 		menuItem.text = label;
-		menuItem.y = 50 * _menuItems.length;
+		menuItem.y = menuItem.height * _menuItems.length;
 		addChild(menuItem);
 		_menuItems.push(menuItem);
-		_height = 50 * _menuItems.length;
+		_height = menuItem.height * _menuItems.length;
 
 		if (_height > _stageProperties.screenHeight) {
 			on("touchstart", _onTouchStart);

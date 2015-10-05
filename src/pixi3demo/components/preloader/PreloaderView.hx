@@ -60,7 +60,7 @@ class PreloaderView extends ComponentView {
 		_loadingBar.x = _loadingBar.y = 2;
 		_loadingBar.scale.x = 0.02;
 
-		_loadingBarContainer.position.set(_logo.x - _loadingBarBG.width / 2, _logo.y + _logo.height - 100);
+		_loadingBarContainer.position.set(_logo.x - _loadingBarBG.width / 2, _logo.y + _logo.height - 50);
 	}
 
 	public function reset() {
